@@ -1,5 +1,5 @@
 
-import './App.css'
+import './index.css'
 import Employee from './component/Employee';
 import {useState} from 'react';
 
@@ -10,7 +10,7 @@ function App() {
   const [role, setRole] = useState('dev');
 
   return (
-    <div className="App">
+    <div className="App bg-red-300">
       {console.log('inside the return branke, showEmployees is active')}
       
       {showEmployees ?
