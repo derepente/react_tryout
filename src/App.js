@@ -1,22 +1,31 @@
 
 import './App.css'
 import Employee from './component/Employee';
+import {useState} from 'react';
 
 
 function App() {
   
   const showEmployees = true; 
-  const count = 4;
+  const [role, setRole] = useState('dev');
 
   return (
     <div className="App">
       {console.log('inside the return branke, showEmployees is active')}
+      
       {showEmployees ?
     <>
-        <Employee></Employee>
-        <Employee></Employee>
-        <Employee></Employee>
-        <Employee></Employee>
+    <input type='text' onChange={(e)  => {
+      console.log(e.target.value);
+      setRole(e.target.value);
+      
+    }} />
+
+    
+        <Employee name = "Klaus" role="intern"></Employee>
+        <Employee name = "Björn" role={role}></Employee>
+        <Employee name = "Hannes"></Employee>
+        
         
       </>
       : 
