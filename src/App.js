@@ -1,23 +1,29 @@
 
-import './App.css';
+import './App.css'
+import Employee from './component/Employee';
+
 
 function App() {
+  
+  const showEmployees = true; 
+  const count = 4;
+
   return (
     <div className="App">
-      <header className="App-header">
+      {console.log('inside the return branke, showEmployees is active')}
+      {showEmployees ?
+    <>
+        <Employee></Employee>
+        <Employee></Employee>
+        <Employee></Employee>
+        <Employee></Employee>
         
-        <p>
-       hello, my first one you see here 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </>
+      : 
+      <p>You shall not see the Employees</p>
+      }
+
+      
     </div>
   );
 }
